@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+import 'main_page/main_page.dart';
+import 'qna_page/qna_page.dart';
+
+void main() {
+  runApp(const App());
+}
+
+class App extends StatefulWidget {
+  const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  int _selectedTabIndex = 0;
+  static List<Widget> pages = <Widget>[
+    const MainPage(),
+    const QnaPage(),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData themeData = ThemeData(
+      useMaterial3: true,
+      fontFamily: 'Pretendard',
+      primaryColor: Colors.green,
+      primarySwatch: Colors.green,
+      dividerColor: Colors.transparent,
+    );
+
+    return MaterialApp(
+        theme: themeData,
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              "Hi2Recycle",
+              style: TextStyle(
+                fontSize: 28.30,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            actions: [
+              IconButton(
+                onPressed: () {
+                  // ToDo: Login/Logout and sets state management
+                },
+                icon: const Icon(Icons.person),
+              )
+            ],
+            scrolledUnderElevation: 0,
+          ),
+          body: pages[_selectedTabIndex],
+          bottomNavigationBar: BottomNavigationBar(
+              selectedItemColor: Colors.green,
+              items: const [
+                BottomNavigationBarItem(icon: Icon(Icons.home), label: "홈"),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.question_mark), label: "Q&A"),
+              ],
+              currentIndex: _selectedTabIndex,
+              onTap: (int index) {
+                setState(() {
+                  _selectedTabIndex = index;
+                });
+              }),
+        ));
+  }
+}
