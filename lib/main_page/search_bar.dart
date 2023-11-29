@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:madteamproject/search_result_page/search_result_page.dart';
 
 class SearchBarWidget extends StatefulWidget {
   const SearchBarWidget({super.key});
@@ -39,8 +40,11 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                 padding: const MaterialStatePropertyAll<EdgeInsets>(
                     EdgeInsets.symmetric(horizontal: 16.0)),
                 onSubmitted: (String value) {
-                  // ToDo: Goto SearchResult with value
-                  print('Submitted value: $value');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              SearchResultPage(searchTarget: value)));
                 },
                 leading: const Icon(Icons.search),
                 trailing: [
