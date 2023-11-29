@@ -15,10 +15,10 @@ class _SingleQnaState extends State<SingleQna> {
   Widget build(BuildContext context) {
     return ExpansionTile(
       title: Text(
-        "Q. ${widget.title}",
+        widget.title,
         style: const TextStyle(
           fontSize: 21.28,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w400,
         ),
       ),
       childrenPadding: const EdgeInsets.only(

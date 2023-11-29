@@ -27,14 +27,15 @@ class _QnaPageState extends State<QnaPage> {
         Padding(
           padding: const EdgeInsets.only(bottom: 40.0),
           child: Column(
-            children: List.generate(10, (index) {
-              return const Column(
+            children: List.generate(20, (index) {
+              return Column(
                 children: [
                   SizedBox(
                     width: double.infinity,
-                    child: SingleQna(title: "title", answer: "answer"),
+                    child:
+                        SingleQna(title: "Test title $index", answer: "answer"),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   )
                 ],

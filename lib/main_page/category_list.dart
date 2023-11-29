@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'category_icon.dart';
-import 'package:madteamproject/information_page/information_page.dart';
+import 'package:madteamproject/category_page/category_page.dart';
 
 class CategoryList extends StatefulWidget {
   const CategoryList({super.key});
@@ -37,10 +37,11 @@ class _CategoryListState extends State<CategoryList> {
                   mainAxisSpacing: 8,
                   crossAxisSpacing: 8,
                   physics: const ScrollPhysics(),
+                  // ToDo: Change children with data using Database
                   children: List.generate(16, (index) {
                     return CategoryIcon(
                       name: 'Test $index',
-                      linkedWidget: const InformationPage(),
+                      linkedWidget: CategoryPage(searchTarget: 'Test $index'),
                     );
                   }),
                 ),

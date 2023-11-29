@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'single_search_result.dart';
 
 class SearchResultPage extends StatefulWidget {
   final String searchTarget;
@@ -14,20 +15,26 @@ class _SearchResultPageState extends State<SearchResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Row(
-        children: [
-          Text(
-            widget.searchTarget,
-            style:
-                const TextStyle(fontSize: 21.28, fontWeight: FontWeight.w600),
-          ),
-          const Text(
-            " 검색 결과",
-            style: TextStyle(fontSize: 21.28, fontWeight: FontWeight.w400),
-          )
-        ],
-      )),
-      body: const Placeholder(),
+        title: Row(
+          children: [
+            Text(
+              widget.searchTarget,
+              style:
+                  const TextStyle(fontSize: 21.28, fontWeight: FontWeight.w600),
+            ),
+            const Text(
+              " 검색 결과",
+              style: TextStyle(fontSize: 21.28, fontWeight: FontWeight.w400),
+            )
+          ],
+        ),
+        scrolledUnderElevation: 0,
+      ),
+      body: ListView.builder(
+          itemCount: 20,
+          itemBuilder: (context, index) {
+            return SingleSearchResult(name: "Test name $index");
+          }),
     );
   }
 }

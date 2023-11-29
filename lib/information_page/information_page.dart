@@ -20,7 +20,9 @@ class _InformationPageState extends State<InformationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        scrolledUnderElevation: 0,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(top: 20.0, left: 16.0, right: 16.0),
         child: ListView(
