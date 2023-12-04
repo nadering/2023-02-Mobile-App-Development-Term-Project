@@ -41,7 +41,7 @@ class _CategoryListState extends State<CategoryList> {
                   children: List.generate(16, (index) {
                     return CategoryIcon(
                       name: 'Test $index',
-                      linkedWidget: CategoryPage(searchTarget: 'Test $index'),
+                      linkedWidget: CategoryPage(name: 'Test $index'),
                     );
                   }),
                 ),

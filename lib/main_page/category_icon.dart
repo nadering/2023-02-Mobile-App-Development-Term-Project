@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class CategoryIcon extends StatefulWidget {
   final String name;
+  final int categoryId;
   final String imageName;
   final Widget linkedWidget;
 
   const CategoryIcon({
     super.key,
     required this.name,
+    this.categoryId = 0,
     this.imageName = "",
     this.linkedWidget = const Placeholder(),
   });

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "677213629714",
+    "project_id": "hi2recycle-7a78c",
+    "storage_bucket": "hi2recycle-7a78c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677213629714:android:c636ba1759ca8358dc17cb",
+        "android_client_info": {
+          "package_name": "com.example.madteamproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWXpavfUgQzwRiMnc-LzJSRWHUpfrwFQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

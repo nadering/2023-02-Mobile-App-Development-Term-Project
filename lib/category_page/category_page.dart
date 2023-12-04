@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'single_object.dart';
 
 class CategoryPage extends StatefulWidget {
-  final String searchTarget;
+  final String name;
 
-  const CategoryPage({super.key, required this.searchTarget});
+  const CategoryPage({super.key, required this.name});
 
   @override
   State<CategoryPage> createState() => _CategoryPageState();
@@ -16,7 +16,7 @@ class _CategoryPageState extends State<CategoryPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.searchTarget,
+          widget.name,
           style: const TextStyle(fontSize: 21.28, fontWeight: FontWeight.w600),
         ),
         scrolledUnderElevation: 0,
