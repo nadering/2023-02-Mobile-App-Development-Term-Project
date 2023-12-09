@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SingleQna extends StatefulWidget {
-  final String title;
+  final String question;
   final String answer;
 
-  const SingleQna({super.key, required this.title, required this.answer});
+  const SingleQna({super.key, required this.question, required this.answer});
 
   @override
   State<SingleQna> createState() => _SingleQnaState();
@@ -15,7 +15,7 @@ class _SingleQnaState extends State<SingleQna> {
   Widget build(BuildContext context) {
     return ExpansionTile(
       title: Text(
-        widget.title,
+        widget.question,
         style: const TextStyle(
           fontSize: 21.28,
           fontWeight: FontWeight.w400,

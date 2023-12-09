@@ -27,6 +27,9 @@ class _SingleSearchResultState extends State<SingleSearchResult> {
                 builder: (context) => InformationPage(
                       categoryId: widget.categoryId,
                       objectId: widget.objectId,
+                      name: "test",
+                      imageName: "aluminumCan.jpg",
+                      method: const ["test"],
                     )));
       },
     );

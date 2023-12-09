@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:madteamproject/information_page/information_page.dart';
 
 class SingleObject extends StatefulWidget {
-  final String name;
   final int categoryId;
   final int objectId;
+  final String name;
+  final String imageName;
+  final List<String> method;
 
   const SingleObject(
-      {super.key, required this.name, this.categoryId = 0, this.objectId = 0});
+      {super.key,
+      required this.categoryId,
+      required this.objectId,
+      required this.name,
+      required this.imageName,
+      required this.method});
 
   @override
   State<SingleObject> createState() => _SingleObjectState();
@@ -27,6 +34,9 @@ class _SingleObjectState extends State<SingleObject> {
                 builder: (context) => InformationPage(
                       categoryId: widget.categoryId,
                       objectId: widget.objectId,
+                      name: widget.name,
+                      imageName: widget.imageName,
+                      method: widget.method,
                     )));
       },
     );

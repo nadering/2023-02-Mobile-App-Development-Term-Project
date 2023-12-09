@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class CategoryIcon extends StatefulWidget {
   final String name;
-  final int categoryId;
+  final int id;
   final String imageName;
   final Widget linkedWidget;
 
   const CategoryIcon({
     super.key,
     required this.name,
-    this.categoryId = 0,
-    this.imageName = "",
-    this.linkedWidget = const Placeholder(),
+    required this.id,
+    required this.imageName,
+    required this.linkedWidget,
   });
 
   @override
@@ -35,13 +35,13 @@ class _CategoryIconState extends State<CategoryIcon> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 60,
                 height: 60,
-                child: DecoratedBox(
-                    decoration: BoxDecoration(
-                  color: Colors.green,
-                )),
+                child: Image(
+                  image: AssetImage(
+                      "assets/images/categoryImage/${widget.imageName}"),
+                ),
               ),
               const SizedBox(
                 height: 8.0,
