@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:madteamproject/search_result_page/searchProvider.dart';
+import 'package:provider/provider.dart';
 import 'login_page.dart';
 import 'main_page/main_page.dart';
 import 'qna_page/qna_page.dart';
@@ -10,7 +12,12 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const App());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => SearchProvider(),
+      child: const App(),
+    ),
+  );
 }
 
 class App extends StatefulWidget {
