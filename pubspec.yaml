@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.23.0
   cloud_firestore: ^4.13.3
+  google_sign_in: ^6.1.6
+  firebase_auth: ^4.15.2
+
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +71,8 @@ flutter:
     - assets/images/
     - assets/images/categoryImage/
     - assets/images/objectImage/
+    - assets/images/google-logo-874x288-549x188.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
