@@ -46,6 +46,7 @@ class _AppState extends State<App> {
 
     return MaterialApp(
       theme: themeData,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Text(

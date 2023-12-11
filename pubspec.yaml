@@ -39,6 +39,7 @@ dependencies:
   cloud_firestore: ^4.13.3
   google_sign_in: ^6.1.6
   firebase_auth: ^4.15.2
+  flutter_native_splash: ^2.3.8
 
 
 dev_dependencies:
