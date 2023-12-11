@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:madteamproject/search_result_page/searchProvider.dart';
 import 'package:madteamproject/search_result_page/search_result_page.dart';
+import 'package:provider/provider.dart';
 
 class SearchBarWidget extends StatefulWidget {
   const SearchBarWidget({super.key});
@@ -11,10 +13,11 @@ class SearchBarWidget extends StatefulWidget {
 class _SearchBarWidgetState extends State<SearchBarWidget> {
   @override
   Widget build(BuildContext context) {
+    final searchProvider = Provider.of<SearchProvider>(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20.0, left: 16.0, right: 16.0),
       child: SizedBox(
-        height: 130.0,
+        height: 140.0,
         child: ListView(children: [
           const Text(
             "모르는 게 있다면 바로 검색해보세요.",
@@ -70,6 +73,21 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                 );
               });
             },
+          )
+          ,const SizedBox(height: 12.0)
+          ,Row(
+            children: [
+              Text('최근 검색 : ',
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                  )),
+              Text(searchProvider.value,
+                  style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              )),
+            ],
           )
         ]),
       ),
