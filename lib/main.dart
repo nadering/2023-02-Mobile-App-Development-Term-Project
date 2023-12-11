@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:madteamproject/NewLoginpage.dart';
 import 'package:madteamproject/search_result_page/searchProvider.dart';
 import 'package:provider/provider.dart';
 import 'login_page.dart';
@@ -62,7 +63,7 @@ class _AppState extends State<App> {
                 return IconButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => const Login()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
                   icon: const Icon(Icons.person),
